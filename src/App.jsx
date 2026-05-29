@@ -8,8 +8,13 @@ import TemoignagesPage from './pages/TemoignagesPage'
 import BonsPlansPage from './pages/BonsPlansPage'
 import DemarchesPage from './pages/DemarchesPage'
 import ContributePage from './pages/ContributePage'
+import FlexZonePage from './pages/FlexZonePage'
 
 const router = createBrowserRouter([
+  {
+    path: '/flexzone',
+    element: <FlexZonePage />,
+  },
   {
     path: '/',
     element: <AppShell />,
