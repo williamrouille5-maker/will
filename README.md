@@ -1,16 +1,46 @@
-# React + Vite
+# Meridian Equipment Capital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine d'un fonds d'investissement spécialisé en **equipment finance**
+(financement d'équipements productifs via crédit-bail et prêts adossés à des actifs).
 
-Currently, two official plugins are available:
+> Marque, chiffres et équipe fictifs — projet de démonstration. Aucune offre ni
+> sollicitation d'investissement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 19** + **Vite** + **Tailwind CSS v4**
+- `react-hot-toast` pour les notifications du formulaire
+- Animations de scroll maison via `IntersectionObserver` (zéro dépendance)
+- Icônes SVG inline (`src/components/Icon.jsx`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Structure
 
-## Expanding the ESLint configuration
+```
+src/
+  App.jsx               Assemblage des sections
+  index.css             Thème (navy + or) et utilitaires
+  data/fund.js          Tout le contenu éditable (chiffres, secteurs, équipe, FAQ…)
+  components/
+    Nav.jsx             Navigation sticky + menu mobile
+    Reveal.jsx          Wrapper d'animation au scroll
+    Icon.jsx            Jeu d'icônes SVG
+    sections/           Hero, Approach, Sectors, Strategy,
+                        Performance, Team, Faq, Contact, Footer
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Lancer le projet
+
+```bash
+npm install
+npm run dev      # serveur de développement
+npm run build    # build de production (dossier dist/)
+npm run preview  # prévisualiser le build
+npm run lint     # ESLint
+```
+
+## Personnalisation
+
+L'essentiel du contenu se modifie dans `src/data/fund.js` : nom du fonds,
+statistiques, secteurs financés, process d'investissement, track record, équipe
+et FAQ. Les couleurs de la marque sont centralisées dans le bloc `@theme` de
+`src/index.css`.
