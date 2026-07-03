@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import { Home, BookOpen, MessageSquare, MapPin } from 'lucide-react'
+import { Home, BookOpen, MessageSquare, MapPin, Gamepad2 } from 'lucide-react'
 
 const tabs = [
   { to: '/', icon: Home, label: 'Accueil', exact: true },
   { to: '/conseils', icon: BookOpen, label: 'Conseils' },
   { to: '/temoignages', icon: MessageSquare, label: 'Témoignages' },
   { to: '/bons-plans', icon: MapPin, label: 'Bons plans' },
+  { to: '/jeu', icon: Gamepad2, label: 'Jeu' },
 ]
 
 export default function BottomNav() {

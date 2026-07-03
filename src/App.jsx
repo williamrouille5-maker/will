@@ -9,6 +9,7 @@ import BonsPlansPage from './pages/BonsPlansPage'
 import DemarchesPage from './pages/DemarchesPage'
 import ContributePage from './pages/ContributePage'
 import FlexZonePage from './pages/FlexZonePage'
+import JeuPage from './pages/JeuPage'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: 'demarches', element: <DemarchesPage /> },
       { path: 'demarches/:procedureId', element: <ArticleDetailPage variant="procedure" /> },
       { path: 'contribuer', element: <ContributePage /> },
+      { path: 'jeu', element: <JeuPage /> },
     ],
   },
 ])
