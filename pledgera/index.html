@@ -1,0 +1,523 @@
+<!doctype html>
+<!--
+  ============================================================================
+  PLEDGERA — Site vitrine statique (landing waitlist)
+  ----------------------------------------------------------------------------
+  Audience ciblée par CE fichier : EMPRUNTEURS INDUSTRIELS (PME/ETI de niche).
+  Pour basculer côté INVESTISSEURS, voir le README.md (section « Changer
+  d'audience ») : il faut réécrire le hero, la section « Pour qui » et les
+  libellés du formulaire. Ne visez qu'UNE audience à la fois.
+
+  Édition : chaque grande section est balisée par un commentaire <!-- SECTION -->.
+  Cherchez le nom de la section pour la retrouver rapidement.
+  ============================================================================
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre affiché dans l'onglet + moteurs de recherche -->
+    <title>Pledgera — Financez vos équipements industriels par la dette privée tokenisée</title>
+
+    <!-- Description SEO : phrase courte, sans promesse de rendement -->
+    <meta
+      name="description"
+      content="Pledgera finance les équipements industriels de niche (impression, plasturgie, agro-processing) via la dette privée tokenisée. Rejoignez la liste d'attente."
+    />
+
+    <!--
+      IMPORTANT (voir mise en garde du README) : tant que la structure
+      juridique et la traction ne sont pas établies, on empêche l'indexation
+      par les moteurs de recherche. Retirez cette ligne pour rendre le site
+      public et référencable.
+    -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Couleur de l'onglet sur mobile -->
+    <meta name="theme-color" content="#0f2036" />
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon minimaliste en SVG inline (pas de fichier externe = plus rapide) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f2036'/%3E%3Ctext x='16' y='22' font-size='18' font-family='Georgia,serif' fill='%23b98a4e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+
+  <body>
+    <!-- Lien d'évitement pour l'accessibilité (visible au clavier uniquement) -->
+    <a class="skip-link" href="#waitlist">Aller au formulaire d'inscription</a>
+
+    <!-- ===================================================================
+         EN-TÊTE / NAVIGATION
+         =================================================================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Pledgera, accueil">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span class="brand-name">Pledgera</span>
+        </a>
+
+        <!-- Navigation ancre. Sur mobile, un bouton l'ouvre/ferme (voir JS). -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+          <a href="#probleme">Le problème</a>
+          <a href="#solution">La solution</a>
+          <a href="#etapes">Comment ça marche</a>
+          <a href="#pour-qui">Pour qui</a>
+          <a href="#conformite">Conformité</a>
+          <a class="nav-cta" href="#waitlist">Liste d'attente</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ===================================================================
+           SECTION — HERO (proposition de valeur + CTA)
+           =================================================================== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <p class="eyebrow">Dette privée tokenisée · Équipements industriels de niche</p>
+
+          <h1 id="hero-title" class="hero-title">
+            Financez vos équipements industriels plus vite, grâce à la dette
+            privée tokenisée.
+          </h1>
+
+          <p class="hero-sub">
+            Pledgera relie les PME industrielles de niche — impression,
+            plasturgie, agro-processing — à un financement d'équipement plus
+            rapide, traçable et transparent. Nous ouvrons l'accès par étapes.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#waitlist">Rejoindre la liste d'attente</a>
+            <a class="btn btn-ghost" href="#solution">Comprendre la solution</a>
+          </div>
+
+          <!-- Réassurance courte, sans chiffre de rendement (contrainte légale) -->
+          <p class="hero-note">
+            Inscription sans engagement · Nous ne collectons que votre e-mail
+            professionnel.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — LE PROBLÈME
+           =================================================================== -->
+      <section id="probleme" class="section" aria-labelledby="probleme-title">
+        <div class="container">
+          <p class="section-eyebrow">Le constat</p>
+          <h2 id="probleme-title" class="section-title">
+            Financer un équipement industriel de niche reste lent, illiquide et
+            mal desservi.
+          </h2>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card-title">Des délais qui bloquent la production</h3>
+              <p>
+                Entre le devis d'un équipement spécialisé et le déblocage des
+                fonds, plusieurs mois peuvent s'écouler. Un temps que peu
+                d'ateliers peuvent se permettre.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Des actifs peu liquides</h3>
+              <p>
+                Une machine d'impression ou une ligne de plasturgie est un actif
+                réel mais difficile à mobiliser : le financement est figé,
+                rarement cessible avant l'échéance.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Un segment mal couvert</h3>
+              <p>
+                Les niches industrielles sont trop petites pour les grands
+                acteurs, trop techniques pour les circuits généralistes. Le
+                besoin est réel, l'offre insuffisante.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — LA SOLUTION
+           =================================================================== -->
+      <section id="solution" class="section section-alt" aria-labelledby="solution-title">
+        <div class="container">
+          <p class="section-eyebrow">Notre approche</p>
+          <h2 id="solution-title" class="section-title">
+            La dette privée tokenisée : plus d'accès, plus de liquidité, plus de
+            traçabilité.
+          </h2>
+          <p class="section-lead">
+            Nous structurons le financement de votre équipement sous forme de
+            dette privée, puis nous la « tokenisons » — c'est-à-dire que nous en
+            enregistrons les parts de façon numérique et infalsifiable. Concrètement :
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card-title">Accès</h3>
+              <p>
+                Un dossier standardisé et un adossement à un actif réel ouvrent
+                le financement à un cercle d'investisseurs plus large, au-delà
+                des circuits bancaires classiques.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Liquidité</h3>
+              <p>
+                Représenter la dette sous forme de parts numériques la rend, à
+                terme, plus facile à céder — dans un cadre réglementé encore en
+                cours de définition.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Traçabilité</h3>
+              <p>
+                Chaque mouvement est horodaté et vérifiable. L'actif financé, les
+                échéances et les parts sont documentés de bout en bout.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — COMMENT ÇA MARCHE (3 étapes)
+           =================================================================== -->
+      <section id="etapes" class="section" aria-labelledby="etapes-title">
+        <div class="container">
+          <p class="section-eyebrow">Le parcours</p>
+          <h2 id="etapes-title" class="section-title">Comment ça marche, en trois étapes.</h2>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3 class="step-title">Vous décrivez votre besoin d'équipement</h3>
+              <p>
+                Type de machine, montant, durée souhaitée. Nous qualifions le
+                dossier et l'actif à financer.
+              </p>
+            </li>
+
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3 class="step-title">Nous structurons et tokenisons la dette</h3>
+              <p>
+                Le financement est formalisé en dette privée adossée à
+                l'équipement, puis représenté en parts numériques dans un cadre
+                encadré.
+              </p>
+            </li>
+
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3 class="step-title">Le financement est débloqué et suivi</h3>
+              <p>
+                Une fois les parts souscrites, les fonds sont libérés. Échéances
+                et remboursements restent traçables pour toutes les parties.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — POUR QUI (segment beachhead)
+           =================================================================== -->
+      <section id="pour-qui" class="section section-alt" aria-labelledby="pour-qui-title">
+        <div class="container">
+          <p class="section-eyebrow">Notre point de départ</p>
+          <h2 id="pour-qui-title" class="section-title">
+            Pensé pour les industriels de niche, pas pour la finance en général.
+          </h2>
+          <p class="section-lead">
+            Nous démarrons volontairement sur un segment précis, là où le besoin
+            est le plus concret et le mieux identifiable :
+          </p>
+
+          <ul class="tags">
+            <li class="tag">Impression &amp; arts graphiques</li>
+            <li class="tag">Plasturgie &amp; injection</li>
+            <li class="tag">Agro-processing &amp; transformation alimentaire</li>
+          </ul>
+
+          <p class="section-body">
+            Vous dirigez un atelier ou une PME industrielle dans l'une de ces
+            filières et vous avez un projet d'équipement dans les prochains mois ?
+            Vous êtes exactement la personne que nous voulons accompagner en
+            premier. Inscrivez-vous pour être contacté au lancement.
+          </p>
+
+          <a class="btn btn-primary" href="#waitlist">Je suis un industriel concerné</a>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — CONFIANCE / CONFORMITÉ
+           ATTENTION : ce bloc n'est PAS décoratif. Le disclaimer ci-dessous
+           est PROVISOIRE et doit être validé par un avocat spécialisé
+           (droit financier / AMF / MiCA) avant toute mise en ligne publique.
+           =================================================================== -->
+      <section id="conformite" class="section" aria-labelledby="conformite-title">
+        <div class="container">
+          <p class="section-eyebrow">Sérieux &amp; conformité</p>
+          <h2 id="conformite-title" class="section-title">
+            Un cadre réglementaire pris au sérieux dès le départ.
+          </h2>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card-title">Adossé à des actifs réels</h3>
+              <p>
+                Chaque financement correspond à un équipement industriel
+                identifié. Pas de spéculation abstraite : de la dette adossée à
+                du matériel productif.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Structuration encadrée</h3>
+              <p>
+                <!-- PLACEHOLDER : remplacez par votre cadre réel une fois défini -->
+                Structuration en cours de cadrage avec des conseils juridiques
+                spécialisés, en vue d'une conformité aux régimes applicables
+                (AMF en France, MiCA au niveau européen).
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">Transparence &amp; traçabilité</h3>
+              <p>
+                Documentation de chaque opération, horodatage des mouvements et
+                information claire des parties. La confiance passe par la preuve.
+              </p>
+            </article>
+          </div>
+
+          <!--
+            DISCLAIMER LÉGAL — PROVISOIRE.
+            À faire relire/valider par un avocat avant publication publique.
+            Ne PAS ajouter de promesse de rendement chiffré au-dessus.
+          -->
+          <aside class="disclaimer" role="note" aria-label="Avertissement légal">
+            <h3 class="disclaimer-title">Avertissement important</h3>
+            <p>
+              Ce site est une communication d'information à caractère provisoire.
+              Il ne constitue ni une offre au public de titres financiers, ni une
+              sollicitation, ni un conseil en investissement, juridique ou fiscal.
+              Aucun rendement n'est garanti ni promis. Les investissements en
+              dette privée présentent un risque de perte en capital et
+              d'illiquidité.
+            </p>
+            <p>
+              Pledgera est une plateforme en cours de développement. Sa
+              structuration réglementaire (notamment au regard des régimes AMF et
+              MiCA) est en cours de définition et pourra évoluer. Toute
+              inscription à la liste d'attente est sans engagement et ne vaut ni
+              souscription, ni promesse contractuelle.
+            </p>
+            <p class="disclaimer-fineprint">
+              <!-- PLACEHOLDER : mentions à compléter avec votre avocat -->
+              Mentions à compléter : statut juridique de la société, agréments
+              ou déclarations éventuels, autorité compétente, coordonnées.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SECTION — CTA FINAL + FORMULAIRE WAITLIST
+           =================================================================== -->
+      <section id="waitlist" class="section section-cta" aria-labelledby="waitlist-title">
+        <div class="container container-narrow">
+          <p class="section-eyebrow section-eyebrow-light">Liste d'attente</p>
+          <h2 id="waitlist-title" class="section-title section-title-light">
+            Soyez parmi les premiers industriels accompagnés.
+          </h2>
+          <p class="section-lead section-lead-light">
+            Laissez votre e-mail professionnel. Nous vous contacterons à
+            l'ouverture, en priorité si votre filière fait partie de notre
+            segment de départ.
+          </p>
+
+          <!--
+            ============================================================
+            FORMULAIRE — À CONNECTER À UN SERVICE EXTERNE
+            ------------------------------------------------------------
+            OPTION A (recommandée ici) — Formspree :
+              1. Créez un formulaire sur https://formspree.io
+              2. Remplacez VOTRE_ID_FORMSPREE ci-dessous par votre identifiant.
+                 Ex : action="https://formspree.io/f/xdorwkpy"
+              3. Le formulaire fonctionne alors sans aucun code serveur.
+
+            OPTION B — Tally :
+              Remplacez tout le <form> par le code d'intégration (embed) fourni
+              par Tally (https://tally.so), ou faites simplement pointer le
+              bouton CTA vers l'URL de votre formulaire Tally.
+            ============================================================
+          -->
+          <form
+            class="waitlist-form"
+            action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+            method="POST"
+          >
+            <!-- Piège anti-spam (honeypot) : invisible, ne pas remplir.
+                 Un robot le remplira et le message sera ignoré côté Formspree. -->
+            <p class="hp" aria-hidden="true">
+              <label>Ne pas remplir ce champ
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </label>
+            </p>
+
+            <div class="form-row">
+              <label class="form-label" for="email">E-mail professionnel</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="prenom@votre-entreprise.fr"
+              />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="entreprise">Entreprise (optionnel)</label>
+              <input
+                class="form-input"
+                type="text"
+                id="entreprise"
+                name="entreprise"
+                autocomplete="organization"
+                placeholder="Nom de votre atelier / société"
+              />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="filiere">Votre filière</label>
+              <select class="form-input" id="filiere" name="filiere">
+                <option value="">— Sélectionnez —</option>
+                <option>Impression / arts graphiques</option>
+                <option>Plasturgie / injection</option>
+                <option>Agro-processing / transformation alimentaire</option>
+                <option>Autre industrie</option>
+              </select>
+            </div>
+
+            <!-- Consentement RGPD : case obligatoire -->
+            <div class="form-row form-consent">
+              <input class="form-check" type="checkbox" id="consent" name="consent" required />
+              <label class="form-consent-label" for="consent">
+                J'accepte d'être recontacté par Pledgera au sujet de la liste
+                d'attente. Mon e-mail ne sera pas cédé à des tiers.
+              </label>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">
+              M'inscrire à la liste d'attente
+            </button>
+
+            <p class="form-note">
+              Sans engagement · Désinscription possible à tout moment.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         PIED DE PAGE — MENTIONS LÉGALES (PLACEHOLDER)
+         =================================================================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span class="brand-name">Pledgera</span>
+          <p class="footer-tagline">
+            Financement d'équipements industriels de niche par la dette privée
+            tokenisée.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Liens de pied de page">
+          <!-- PLACEHOLDER : créez ces pages ou remplacez par des liens réels -->
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Avertissement sur les risques</a>
+          <a href="#waitlist">Liste d'attente</a>
+        </nav>
+      </div>
+
+      <div class="container footer-legal">
+        <p>
+          <!-- PLACEHOLDER : à compléter (raison sociale, SIREN, siège, contact) -->
+          © <span id="year">2026</span> Pledgera — Société [forme juridique] en
+          cours de constitution. SIREN [à compléter]. Siège : [adresse].
+          Contact : [e-mail].
+        </p>
+        <p class="footer-disclaimer">
+          Communication non contractuelle. Ne constitue ni une offre au public,
+          ni un conseil en investissement. Investir en dette privée comporte un
+          risque de perte en capital.
+        </p>
+      </div>
+    </footer>
+
+    <!--
+      ========================================================================
+      JAVASCRIPT — le strict minimum, en vanilla (aucune dépendance)
+      1) Menu mobile (ouvrir/fermer)
+      2) Année automatique dans le pied de page
+      ========================================================================
+    -->
+    <script>
+      // 1) Bascule du menu sur mobile
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        });
+        // Referme le menu quand on clique sur un lien (utile sur mobile)
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 2) Année courante dans le footer (évite de la mettre à jour à la main)
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
