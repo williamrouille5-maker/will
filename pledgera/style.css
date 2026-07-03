@@ -79,6 +79,9 @@ body {
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
+  /* Sécurité : coupe les mots très longs (URL, e-mails) plutôt que de
+     déborder horizontalement sur les petits écrans. */
+  overflow-wrap: break-word;
 }
 
 img {
