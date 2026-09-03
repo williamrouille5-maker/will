@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entreprise Finder — Enrichissement de contacts</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-contenu">
+    <div>
+      <h1>Entreprise Finder</h1>
+      <p class="sous-titre">Enrichissement de contacts dirigeants à partir d'un numéro SIREN</p>
+    </div>
+    <div class="statut-ia">
+      {% if ia_active %}
+        <span class="pastille pastille-active"></span> IA activée
+      {% else %}
+        <span class="pastille pastille-inactive"></span> Mode règles simples (sans IA)
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <nav class="onglets">
+    <button class="onglet actif" data-cible="panneau-unitaire">Recherche unitaire</button>
+    <button class="onglet" data-cible="panneau-batch">Traitement en lot (CSV)</button>
+  </nav>
+
+  <!-- ==================== RECHERCHE UNITAIRE ==================== -->
+  <section id="panneau-unitaire" class="panneau">
+    <form id="form-unitaire" class="carte formulaire">
+      <label for="input-siren">Numéro SIREN</label>
+      <div class="ligne-saisie">
+        <input type="text" id="input-siren" name="siren" placeholder="ex : 552100554" maxlength="9" required>
+        <button type="submit" id="bouton-lancer">Lancer l'enquête</button>
+      </div>
+    </form>
+
+    <div id="console-log" class="carte console" hidden>
+      <div class="console-titre">Progression de l'enquête</div>
+      <div id="console-lignes"></div>
+    </div>
+
+    <div id="resultat-unitaire"></div>
+  </section>
+
+  <!-- ==================== TRAITEMENT EN LOT ==================== -->
+  <section id="panneau-batch" class="panneau" hidden>
+    <div class="carte formulaire">
+      <label for="input-fichier">Fichier CSV (colonne <code>siren</code> requise)</label>
+      <div class="ligne-saisie">
+        <input type="file" id="input-fichier" accept=".csv">
+        <button id="bouton-batch">Lancer le traitement</button>
+      </div>
+      <a href="{{ url_for('static', filename='exemple.csv') }}" class="lien-discret">Télécharger un exemple de fichier</a>
+    </div>
+
+    <div id="progression-batch" class="carte" hidden>
+      <div class="barre-progression-fond">
+        <div id="barre-progression" class="barre-progression"></div>
+      </div>
+      <div id="progression-texte" class="progression-texte"></div>
+    </div>
+
+    <div id="resultats-batch"></div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  Données issues de sources publiques (API Recherche d'entreprises, recherche web, vérification technique des adresses email).
+  Les niveaux de fiabilité sont indicatifs et ne remplacent pas une vérification manuelle sur les dossiers sensibles.
+</footer>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
